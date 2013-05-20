@@ -19,7 +19,6 @@ Bundle 'Shougo/neocomplcache'
 "Bundle 'rosenfeld/conque-term'
 Bundle 'motemen/git-vim'
 Bundle 'naseer/logcat'
-
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -35,6 +34,7 @@ Bundle 'maxbrunsfeld/vim-yankstack'
 "Bundle 'myusuf3/numbers.vim'
 Bundle 'Mark'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'airblade/vim-gitgutter'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
