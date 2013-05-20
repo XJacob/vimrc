@@ -34,6 +34,7 @@ Bundle 'tomasr/molokai'
 Bundle 'maxbrunsfeld/vim-yankstack'
 "Bundle 'myusuf3/numbers.vim'
 Bundle 'Mark'
+Bundle 'terryma/vim-multiple-cursors'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
