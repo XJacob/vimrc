@@ -35,6 +35,7 @@ Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'Mark'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'Raimondi/delimitMate'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -99,7 +100,7 @@ nnoremap <silent><F6> :botright cwindow<CR>
 nnoremap <silent><F7> :ccl<CR>
 nnoremap <F8> :grep -riI "<C-R><C-A>" %:p:h/*
 nnoremap <silent><F4> :NERDTreeToggle<CR>
-
+inoremap jj <ESC>
 "==============================================================================
 "feature
 syntax enable "Enable syntax hl
