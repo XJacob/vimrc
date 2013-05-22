@@ -34,8 +34,9 @@ Bundle 'maxbrunsfeld/vim-yankstack'
 "Bundle 'myusuf3/numbers.vim'
 Bundle 'Mark'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'airblade/vim-gitgutter'
+"Bundle 'airblade/vim-gitgutter'
 Bundle 'Raimondi/delimitMate'
+Bundle 'ciaranm/detectindent'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -218,6 +219,10 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplVSplit = 25
 let g:miniBufExplSplitBelow=1
 autocmd BufRead,BufNew :call UMiniBufExplorer
+
+" auto command for auto detec indent
+autocmd BufReadPost * :DetectIndent
+
 
 """"""""""""""""""""""""""""""
 " => conque
