@@ -3,7 +3,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
@@ -37,6 +37,7 @@ Bundle 'terryma/vim-multiple-cursors'
 "Bundle 'airblade/vim-gitgutter'
 Bundle 'Raimondi/delimitMate'
 Bundle 'ciaranm/detectindent'
+Bundle 'bronson/vim-trailing-whitespace'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -94,6 +95,11 @@ map <leader>fb :FufBookmarkFile<cr>
 map <leader>fa :FufBookmarkFileAdd<cr>
 map <leader>ff :FufFileWithCurrentBufferDir<cr>
 
+"find the trailing space
+"map <leader>sp :/\(\S\+\)\@<=\s\+$
+"find the spaces before a tab
+"map <leader>spt :/ \+\ze\t
+
 nnoremap <silent><F9> :TlistToggle<CR>
 nnoremap <silent><F2> <C-t><CR>
 nnoremap <silent><F3> :cs find g <C-R>=expand("<cword>")<CR><CR>
@@ -144,7 +150,7 @@ try
     else
       set undodir=~/.vim/undodir
     endif
-    
+
     set undofile
 catch
 endtry
@@ -158,7 +164,7 @@ set ignorecase "Ignore case when searching
 set smartcase
 set hlsearch "Highlight search things
 set incsearch "Make search act like search in modern browsers
-set nolazyredraw "Don't redraw while executing macros 
+set nolazyredraw "Don't redraw while executing macros
 set magic "Set magic on, for regular expressions
 set showmatch "Show matching bracets when text indicator is over them
 set mat=2 "How many tenths of a second to blink
@@ -237,7 +243,7 @@ autocmd BufReadPost * :DetectIndent
 """"""""""""""""""""""""""""""
 " => fufuzzyfinder
 """"""""""""""""""""""""""""""
-let g:fuf_modesDisable = [ 'tag', 'buffertag', 'taggedfile', 'jumplist', 'changelist', 'quickfix', 'mrucmd' ]  
+let g:fuf_modesDisable = [ 'tag', 'buffertag', 'taggedfile', 'jumplist', 'changelist', 'quickfix', 'mrucmd' ]
 
 """"""""""""""""""""""""""""""
 " => autoload_cscope
@@ -265,54 +271,54 @@ let g:NERDTreeWinSize = 20
 """"""""""""""""""""""""""""""
 " => neocomplcache
 """"""""""""""""""""""""""""""
-" Disable AutoComplPop. 
-let g:acp_enableAtStartup = 0 
-" Use neocomplcache. 
-let g:neocomplcache_enable_at_startup = 1 
-" Use smartcase. 
-let g:neocomplcache_enable_smart_case = 1 
-" Use camel case completion. 
-let g:neocomplcache_enable_camel_case_completion = 1 
-" Use underbar completion. 
-let g:neocomplcache_enable_underbar_completion = 1 
-" Set minimum syntax keyword length. 
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplcache.
+let g:neocomplcache_enable_at_startup = 1
+" Use smartcase.
+let g:neocomplcache_enable_smart_case = 1
+" Use camel case completion.
+let g:neocomplcache_enable_camel_case_completion = 1
+" Use underbar completion.
+let g:neocomplcache_enable_underbar_completion = 1
+" Set minimum syntax keyword length.
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_auto_completion_start_length = 7
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*' 
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 let g:neocomplcache_max_keyword_width = 20
 
-" Define dictionary. 
-let g:neocomplcache_dictionary_filetype_lists = { 
-    \ 'default' : '', 
-    \ 'vimshell' : $HOME.'/.vimshell_hist', 
-    \ 'scheme' : $HOME.'/.gosh_completions' 
-    \ } 
+" Define dictionary.
+let g:neocomplcache_dictionary_filetype_lists = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions'
+    \ }
 
-" Define keyword. 
-if !exists('g:neocomplcache_keyword_patterns') 
-    let g:neocomplcache_keyword_patterns = {} 
-endif 
-let g:neocomplcache_keyword_patterns['default'] = '\h\w*' 
+" Define keyword.
+if !exists('g:neocomplcache_keyword_patterns')
+    let g:neocomplcache_keyword_patterns = {}
+endif
+let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
-" Plugin key-mappings. 
-imap <C-k>     <Plug>(neocomplcache_snippets_expand) 
-smap <C-k>     <Plug>(neocomplcache_snippets_expand) 
-inoremap <expr><C-g>     neocomplcache#undo_completion() 
-inoremap <expr><C-l>     neocomplcache#complete_common_string() 
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neocomplcache_snippets_expand)
+smap <C-k>     <Plug>(neocomplcache_snippets_expand)
+inoremap <expr><C-g>     neocomplcache#undo_completion()
+inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
-" SuperTab like snippets behavior. 
-"imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>" 
+" SuperTab like snippets behavior.
+"imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
-" Recommended key-mappings. 
-" <CR>: close popup and save indent. 
-inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>" 
-" <TAB>: completion. 
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>" 
-" <C-h>, <BS>: close popup and delete backword char. 
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>" 
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>" 
-inoremap <expr><C-y>  neocomplcache#close_popup() 
-inoremap <expr><C-e>  neocomplcache#cancel_popup() 
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplcache#close_popup()
+inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
 "==============================================================================
 "temp
