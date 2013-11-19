@@ -1,0 +1,34 @@
+From a73fa434e9e3d54dec23b8d4ec04d95620fbba8f Mon Sep 17 00:00:00 2001
+From: "jacob.lee" <jacob-new@jacobnew-Veriton-M670.(none)>
+Date: Tue, 21 May 2013 11:10:51 +0800
+Subject: =?UTF-8?q?1.=20Add=20new=20plugin:=20delimitMate=0A2.=20map=20jj=20?=
+ =?UTF-8?q?to=20be=20<ESC>=20key?=
+
+---
+ .vimrc |    3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/.vimrc b/.vimrc
+index 164b6bb..9bfbaba 100644
+--- a/.vimrc
++++ b/.vimrc
+@@ -35,6 +35,7 @@ Bundle 'maxbrunsfeld/vim-yankstack'
+ Bundle 'Mark'
+ Bundle 'terryma/vim-multiple-cursors'
+ Bundle 'airblade/vim-gitgutter'
++Bundle 'Raimondi/delimitMate'
+ 
+ " non github repos
+ "Bundle 'git://git.wincent.com/command-t.git'
+@@ -99,7 +100,7 @@ nnoremap <silent><F6> :botright cwindow<CR>
+ nnoremap <silent><F7> :ccl<CR>
+ nnoremap <F8> :grep -riI "<C-R><C-A>" %:p:h/*
+ nnoremap <silent><F4> :NERDTreeToggle<CR>
+-
++inoremap jj <ESC>
+ "==============================================================================
+ "feature
+ syntax enable "Enable syntax hl
+-- 
+1.7.9.5
+

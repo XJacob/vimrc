@@ -17,7 +17,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'msanders/snipmate.vim'
 Bundle 'Shougo/neocomplcache'
 "Bundle 'rosenfeld/conque-term'
-Bundle 'motemen/git-vim'
+"Bundle 'motemen/git-vim'
 Bundle 'naseer/logcat'
 " vim-scripts repos
 Bundle 'L9'
@@ -38,6 +38,9 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'Raimondi/delimitMate'
 Bundle 'ciaranm/detectindent'
 Bundle 'bronson/vim-trailing-whitespace'
+"Bundle 'GrepHere'
+"Bundle 'yegappan/grep'
+Bundle 'buffergrep'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -77,6 +80,8 @@ map <leader>es :set noexpandtab<cr>
 
 map <leader>vv : Vimwiki2HTML<cr>
 map <leader>va : VimwikiAll2HTML<cr>
+map <leader>gb :Tgrep <C-R><C-A>
+
 nmap <leader>tt <Plug>VimwikiToggleListItem
 
 nmap <leader>p <Plug>yankstack_substitute_older_paste
