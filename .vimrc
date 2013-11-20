@@ -80,7 +80,7 @@ map <leader>es :set noexpandtab<cr>
 
 map <leader>vv : Vimwiki2HTML<cr>
 map <leader>va : VimwikiAll2HTML<cr>
-map <leader>gb :Tgrep <C-R><C-A>
+map <leader>gb :Wgrep /<C-R><C-A>/j
 
 nmap <leader>tt <Plug>VimwikiToggleListItem
 
