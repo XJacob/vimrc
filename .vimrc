@@ -263,10 +263,13 @@ let g:vimwiki_camel_case = 0
 let g:vimwiki_list = [{
     \ 'path' : $HOME.'/jacob-old/data/my_wiki/source',
     \ 'path_html' : $HOME.'/jacob-old/data/my_wiki/html',
+    \ 'template_path': $HOME.'/.vim/vimwiki_html/',
+    \ 'template_default': 'def_template',
+    \ 'template_ext': '.html',
     \ 'nested_syntaxes' : {'cpp' : 'cpp', 'python' : 'python', 'bash' : 'bash', 'java' : 'java'},
     \ 'auto_export' : 0,
 	\ }]
-let g:vimwiki_valid_html_tags='b,i,s,u,sub,sup,kbd,br,hr,div,del,code,red,cente,pre,font,img'
+let g:vimwiki_valid_html_tags='script,b,i,s,u,sub,sup,kbd,br,hr,div,del,code,red,cente,pre,font,img'
 
 """"""""""""""""""""""""""""""
 " => MRU
@@ -343,3 +346,5 @@ function! CurDir()
 endfunction
 
 
+"vimwiki syntax highlight
+"let g:vimwiki_list = [{'html_header': '~/.vim/vimwiki_html/header.tpl'}]
