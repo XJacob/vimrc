@@ -41,6 +41,7 @@ Bundle 'bronson/vim-trailing-whitespace'
 "Bundle 'GrepHere'
 "Bundle 'yegappan/grep'
 Bundle 'buffergrep'
+Bundle 'DrawIt'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
