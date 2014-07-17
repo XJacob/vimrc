@@ -150,6 +150,11 @@ set nobackup
 set nowb
 set noswapfile
 
+"folding setting
+set foldmethod=indent
+set foldnestmax=1
+set nofoldenable
+
 try
     if MySys() == "windows"
       set undodir=C:\Windows\Temp
