@@ -1,6 +1,6 @@
 Install
 =====
-1. git clone https://github.com:XJacob/vimrc.git ~/.vim/
+1. git clone https://github.com/XJacob/vimrc.git ~/.vim/
 2. ln -s ~/.vim/.vimrc ~/.vimrc
 3. git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 4. vim
