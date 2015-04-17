@@ -267,8 +267,8 @@ let g:autocscope_menus = 0
 let g:vimwiki_hl_cb_checked = 1
 let g:vimwiki_camel_case = 0
 let g:vimwiki_list = [{
-    \ 'path' : $HOME.'/jacob-old/data/my_wiki/source',
-    \ 'path_html' : $HOME.'/jacob-old/data/my_wiki/html',
+    \ 'path' : $HOME.'/Documents/my_wiki/source',
+    \ 'path_html' : $HOME.'/Documents/my_wiki/html',
     \ 'template_path': $HOME.'/.vim/vimwiki_html/',
     \ 'template_default': 'def_template',
     \ 'template_ext': '.html',
