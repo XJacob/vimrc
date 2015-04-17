@@ -6,6 +6,7 @@ Install
 4. vim
 5. In Vim, run :BundleInstall
 
+If cscop/tags is needed, run "sudo apt-get install cscope ctags"
 
 Plug
 =====

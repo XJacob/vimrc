@@ -28,7 +28,6 @@ Bundle 'mru.vim'
 Bundle 'taglist.vim'
 Bundle 'lookupfile'
 Bundle 'vimwiki'
-Bundle 'autoload_cscope.vim'
 Bundle 'tomasr/molokai'
 Bundle 'maxbrunsfeld/vim-yankstack'
 "Bundle 'myusuf3/numbers.vim'
@@ -107,10 +106,12 @@ map <leader>ff :FufFileWithCurrentBufferDir<cr>
 "map <leader>spt :/ \+\ze\t
 
 nnoremap <silent><F9> :TlistToggle<CR>
-nnoremap <silent><F2> <C-t><CR>
-nnoremap <silent><F3> :cs find g <C-R>=expand("<cword>")<CR><CR>
 nnoremap <silent><F6> :botright cwindow<CR>
 nnoremap <silent><F7> :ccl<CR>
+
+nnoremap <silent><F2> <C-t><CR>
+nnoremap <silent><F3> :cs find g <C-R>=expand("<cword>")<CR><CR>
+
 nnoremap <F8> :grep -riI "<C-R><C-A>" %:p:h/*
 nnoremap <silent><F4> :NERDTreeToggle<CR>
 inoremap jj <ESC>
@@ -255,11 +256,6 @@ autocmd BufReadPost * :DetectIndent
 " => fufuzzyfinder
 """"""""""""""""""""""""""""""
 let g:fuf_modesDisable = [ 'tag', 'buffertag', 'taggedfile', 'jumplist', 'changelist', 'quickfix', 'mrucmd' ]
-
-""""""""""""""""""""""""""""""
-" => autoload_cscope
-""""""""""""""""""""""""""""""
-let g:autocscope_menus = 0
 
 """"""""""""""""""""""""""""""
 " => vimwiki
