@@ -60,7 +60,6 @@ filetype plugin indent on     " required!
 "varaible
 let mapleader = ","
 let g:mapleader = ","
-let g:LookupFile_TagExpr = '"../filenametags"'
 let showmarks_enable = 0
 "let g:yankstack_map_keys = 0
 "==============================================================================
@@ -68,6 +67,14 @@ let showmarks_enable = 0
 " When you press <leader>r you can search and replace the selected text
 "vnoremap <silent> <leader>R :call VisualSelection('replace')<CR>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
+"===for lookup file
+let g:LookupFile_TagExpr = '"./filenametags"'
+"let g:LookupFile_MinPatLength = 2
+let g:LookupFile_PreserveLastPattern = 0
+"let g:LookupFile_PreservePatternHistory = 1
+let g:LookupFile_AlwaysAcceptFirst = 1
+
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
