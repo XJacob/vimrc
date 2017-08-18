@@ -41,6 +41,9 @@ Bundle 'bronson/vim-trailing-whitespace'
 "Bundle 'yegappan/grep'
 Bundle 'buffergrep'
 Bundle 'DrawIt'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
+
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -357,3 +360,6 @@ endfunction
 
 "vimwiki syntax highlight
 "let g:vimwiki_list = [{'html_header': '~/.vim/vimwiki_html/header.tpl'}]
+"
+"airline
+" let g:airline#extensions#tabline#enabled = 1
