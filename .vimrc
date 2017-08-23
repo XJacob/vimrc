@@ -193,7 +193,9 @@ set mat=2 "How many tenths of a second to blink
 set laststatus=2  " Always hide the statusline
 
 " Format the statusline
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L
+"set statusline=\ %<%f%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L
+"copy from airline default output
+let g:airline_section_c ="[%n] %<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#"
 iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 
 set listchars=tab:T-
