@@ -43,7 +43,7 @@ Bundle 'buffergrep'
 Bundle 'DrawIt'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
-
+Bundle 'simeji/winresizer'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -363,3 +363,5 @@ endfunction
 "
 "airline
 " let g:airline#extensions#tabline#enabled = 1
+"
+
