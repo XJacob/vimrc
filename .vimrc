@@ -44,9 +44,12 @@ Bundle 'DrawIt'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'simeji/winresizer'
-
+Bundle 'tpope/vim-pathogen'
+Bundle 'tpope/vim-fugitive'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
+
+call pathogen#infect()
 
 filetype plugin indent on     " required!
 "
