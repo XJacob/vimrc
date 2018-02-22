@@ -46,6 +46,7 @@ Bundle 'vim-airline/vim-airline-themes'
 Bundle 'simeji/winresizer'
 Bundle 'tpope/vim-pathogen'
 Bundle 'tpope/vim-fugitive'
+Bundle 'phamer/AnsiEsc'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 
