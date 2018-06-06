@@ -47,6 +47,8 @@ Bundle 'simeji/winresizer'
 Bundle 'tpope/vim-pathogen'
 Bundle 'tpope/vim-fugitive'
 Bundle 'phamer/AnsiEsc'
+Bundle 'GrepHere'
+Bundle 'GrepCommands'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 
@@ -370,4 +372,8 @@ endfunction
 "airline
 " let g:airline#extensions#tabline#enabled = 1
 "
+"
+
+"GrepHere
+nmap <Leader>N <Plug>(GrepHereCurrent)
 
