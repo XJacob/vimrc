@@ -49,6 +49,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'phamer/AnsiEsc'
 Bundle 'GrepHere'
 Bundle 'GrepCommands'
+Bundle 'elzr/vim-json'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 
@@ -180,7 +181,7 @@ try
     endif
 
     set undofile
-catch
+    catch
 endtry
 
 set autoread
@@ -205,9 +206,7 @@ let g:airline_section_c ="[%n] %<%F%m %#__accent_red#%{airline#util#wrap(airline
 iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 
 set listchars=tab:T-
-set shiftwidth=4
-set tabstop=4
-set smarttab
+set shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 set lbr
 set tw=500
 set ai "Auto indent
@@ -232,6 +231,7 @@ vnoremap <silent> # :call VisualSelection('b')<CR>
 "  exe "normal `z"
 "endfunc
 "command! clearspace: call DeleteTralingWS()
+command Jsonformat %!python -m json.tool
 
 "==============================================================================
 "plugin config
@@ -257,7 +257,7 @@ let g:miniBufExplSplitBelow=1
 autocmd BufRead,BufNew :call UMiniBufExplorer
 
 " auto command for auto detec indent
-autocmd BufReadPost * :DetectIndent
+" autocmd BufReadPost * :DetectIndent
 
 
 """"""""""""""""""""""""""""""
