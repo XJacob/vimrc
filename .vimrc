@@ -25,7 +25,6 @@ Bundle 'FuzzyFinder'
 Bundle 'bufexplorer.zip'
 Bundle 'minibufexpl.vim'
 Bundle 'mru.vim'
-Bundle 'taglist.vim'
 Bundle 'lookupfile'
 Bundle 'vimwiki'
 Bundle 'tomasr/molokai'
@@ -40,7 +39,6 @@ Bundle 'bronson/vim-trailing-whitespace'
 "Bundle 'GrepHere'
 "Bundle 'yegappan/grep'
 Bundle 'buffergrep'
-Bundle 'DrawIt'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'simeji/winresizer'
@@ -51,6 +49,8 @@ Bundle 'GrepHere'
 Bundle 'GrepCommands'
 Bundle 'elzr/vim-json'
 Bundle 'SrcExpl'
+Bundle 'junegunn/fzf'
+Bundle 'junegunn/fzf.vim'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 
@@ -122,6 +122,8 @@ map <leader>ff :FufFileWithCurrentBufferDir<cr>
 "map <leader>sp :/\(\S\+\)\@<=\s\+$
 "find the spaces before a tab
 "map <leader>spt :/ \+\ze\t
+nnoremap <leader>g :cd %:p:h <bar> Rg <C-R><C-W>
+nnoremap <leader>f :Rg <C-R><C-W><CR>
 
 nnoremap <silent><F9> :TlistToggle<CR>
 "nnoremap <silent><F6> :botright cwindow<CR>
@@ -131,6 +133,7 @@ nnoremap <silent><F2> <C-t><CR>
 nnoremap <silent><F3> :cs find g <C-R>=expand("<cword>")<CR><CR>
 
 nnoremap <F8> :grep -riI "<C-R><C-A>" %:p:h/*
+
 nnoremap <silent><F4> :NERDTreeToggle<CR>
 inoremap jj <ESC>
 "==============================================================================
@@ -459,3 +462,4 @@ let g:SrcExpl_prevDefKey = "<F6>"
 
 " // Set "<F4>" key for displaying the next definition in the jump list 
 let g:SrcExpl_nextDefKey = "<F7>" 
+
